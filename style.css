@@ -1,90 +1,117 @@
-body{
-    margin: 0;
-    font-family: 'Inter', sans-serif;
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
-h1{
-    text-align: center;
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+h1 {
+  text-align: center;
 }
 
 .logo img {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    position: relative;
-    background-color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: white;
 }
 
 .navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.navbar a{
-    color: black;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-    text-align: center;
-    transition: color 0.2s ease;
+.navbar a {
+  color: black;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  transition: color 0.2s ease;
 }
 
 .navbar a:hover {
-    color: #C98267;
+  color: #c98267;
 }
 
 .container:has(> .hero) {
-    padding: 0;
+  padding: 0;
 }
 
 .hero img {
-    width: 100%;
-    height: 650px;
-    object-fit: cover;
-    object-position: center 55%;
-    display: block;
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  object-position: center 55%;
+  display: block;
 }
 
 .hero {
-    position: relative;
+  position: relative;
 }
 
 .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
 }
 
 .hero-text h1 {
-    text-align: left;
-    font-size: 40px;
-    max-width: 400px;
-    color: #2E2E2E;
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
+  text-align: left;
+  font-size: 40px;
+  max-width: 400px;
+  color: #2e2e2e;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
 }
 
 .hero-text p {
-    font-size: 18px;
-    color: #514A44;
+  font-size: 18px;
+  color: #514a44;
 }
 
 .shop-button {
-    display: inline-block;
-    background-color: #F4C4AE;
-    color: #2E2E2E;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 5px;
+  display: inline-block;
+  background-color: #f4c4ae;
+  color: #2e2e2e;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.shop-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.shop-page h1,
+.shop-page > p {
+  text-align: center;
+}
+
+.product-card {
+  max-width: 320px;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
