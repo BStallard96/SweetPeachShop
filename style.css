@@ -144,6 +144,15 @@ h1 {
   background-color: #eab095;
 }
 
+.navbar .cart-link {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.cart-link svg {
+  display: block;
+}
+
 @media (max-width: 900px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -151,6 +160,11 @@ h1 {
 
   .navbar {
     flex-direction: column;
+  }
+
+  .navbar .cart-link {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .navbar ul {

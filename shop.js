@@ -1,13 +1,21 @@
-let cartCount = 0;
+const savedCart = localStorage.getItem("sweetPeachCart");
+const cart = savedCart ? JSON.parse(savedCart) : [];
 
 const cartCountElement = document.querySelector("#cart-count");
 
+cartCountElement.textContent = cart.length;
+
 const addToCartButtons = document.querySelectorAll(".add-to-cart");
-console.log(addToCartButtons.length);
 
 addToCartButtons.forEach(function (button) {
   button.addEventListener("click", function () {
-    cartCount = cartCount + 1;
-    cartCountElement.textContent = cartCount;
+    const productId = button.dataset.productId;
+    console.log("Selected product:", productId);
+
+    cart.push(productId);
+    localStorage.setItem("sweetPeachCart", JSON.stringify(cart));
+
+    console.log("Cart:", JSON.stringify(cart));
+    cartCountElement.textContent = cart.length;
   });
 });
