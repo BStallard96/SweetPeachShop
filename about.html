@@ -3,7 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>About | Sweet Peach Shop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body class="cream-background">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/logo5.png" alt="Sweet Peach Shop logo" />
+      </a>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="cart.html" class="cart-link" aria-label="View shopping cart">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          aria-hidden="true"
+        >
+          <path d="M2 3h3l3 12h11l3-9H6" />
+          <circle cx="9" cy="20" r="1" />
+          <circle cx="18" cy="20" r="1" />
+        </svg>
+      </a>
+    </nav>
+
+    <main class="about-page">
+      <header class="about-intro">
+        <p>Our Story</p>
+        <h1>A little handmade. A little Peach.</h1>
+      </header>
+      <section class="about-story">
+        <figure class="about-photo">
+          <img
+            src="images/peach.jpg"
+            alt="Peach wearing a floral collar and name tag outdoors"
+          />
+          <figcaption>Peach, the inspiration behind our name.</figcaption>
+        </figure>
+
+        <div class="about-copy">
+          <p class="about-label">Meet our namesake</p>
+          <h2>It started with Peach.</h2>
+          <p>
+            Sweet Peach Shop is named after our dog, Peach, the sweet face
+            behind the name.
+          </p>
+          <p>
+            We make handmade polymer clay earrings, with care and a little
+            personality in every pair.
+          </p>
+          <a href="shop.html" class="shop-button">Shop the earrings</a>
+        </div>
+      </section>
+      <p class="about-closing">Handmade with care. Named with love.</p>
+    </main>
+  </body>
 </html>

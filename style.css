@@ -153,9 +153,97 @@ h1 {
   display: block;
 }
 
+.cream-background {
+  background-color: #fcf9f5;
+  color: #2e2e2e;
+}
+
+.about-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.about-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.about-intro {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.about-intro p {
+  color: #71866b;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.about-intro h1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.about-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.about-photo {
+  margin: 0;
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-photo figcaption {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #514a44;
+}
+
+.about-copy p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #514a44;
+  margin: 0 0 24px;
+}
+
+.about-copy .about-label {
+  color: #71866b;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.about-copy h2 {
+  font-size: 40px;
+  font-weight: 400;
+  margin: 0 0 24px;
+}
+
+.about-closing {
+  margin: 48px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid #d8d3cc;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  color: #514a44;
+}
+
 @media (max-width: 900px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .about-story {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .navbar {
