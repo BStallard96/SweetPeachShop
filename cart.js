@@ -20,6 +20,8 @@ cart.forEach(function (productId, index) {
   subtotal += product.price;
   const itemElement = document.createElement("p");
 
+  itemElement.classList.add("cart-item");
+
   itemElement.textContent = `${product.name}: $${product.price.toFixed(2)}`;
 
   cartItemsElement.appendChild(itemElement);
@@ -38,5 +40,6 @@ cart.forEach(function (productId, index) {
 });
 
 const subtotalElement = document.createElement("p");
+subtotalElement.classList.add("cart-subtotal");
 subtotalElement.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
 cartItemsElement.appendChild(subtotalElement);
