@@ -5,7 +5,14 @@ const products = {
 };
 
 const savedCart = localStorage.getItem("sweetPeachCart");
+
 const cart = savedCart ? JSON.parse(savedCart) : [];
+
+const quantities = {};
+
+cart.forEach(function (productId) {
+  quantities[productId] = (quantities[productId] || 0) + 1;
+});
 
 const cartItemsElement = document.querySelector("#cart-items");
 
@@ -15,23 +22,26 @@ if (cart.length === 0) {
 
 let subtotal = 0;
 
-cart.forEach(function (productId, index) {
+Object.keys(quantities).forEach(function (productId) {
   const product = products[productId];
-  subtotal += product.price;
+  const quantity = quantities[productId];
+  const lineTotal = product.price * quantity;
+  subtotal += lineTotal;
   const itemElement = document.createElement("p");
 
   itemElement.classList.add("cart-item");
 
-  itemElement.textContent = `${product.name}: $${product.price.toFixed(2)}`;
+  itemElement.textContent = `${product.name} (Qty: ${quantity}): $${lineTotal.toFixed(2)}`;
 
   cartItemsElement.appendChild(itemElement);
 
   const removeButton = document.createElement("button");
   removeButton.type = "button";
-  removeButton.textContent = "Remove";
+  removeButton.textContent = "Remove one";
 
   removeButton.addEventListener("click", function () {
-    cart.splice(index, 1);
+    const itemIndex = cart.indexOf(productId);
+    cart.splice(itemIndex, 1);
     localStorage.setItem("sweetPeachCart", JSON.stringify(cart));
     window.location.reload();
   });
